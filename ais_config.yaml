@@ -1,0 +1,33 @@
+project:
+  name: AI-Based Mining Performance Rating Analysis
+  algorithm: Artificial Immune System
+  method: Clonal Selection Algorithm
+  dataset: RS_Session_265_AU_1557_A_to_D.csv
+ais_parameters:
+  population_size: 80
+  generations: 500
+  elite_size: 15
+  clones_per_antibody: 10
+  mutation_rate: 0.25
+  mutation_decay: 0.995
+  random_injection: 10
+  polynomial_degree: 1
+  random_seed: 42
+model:
+  type: Multi-Output Linear Regression
+  optimization: AIS-CLONALG
+  model_file: ais_model.pkl
+  h5_file: ais_model.h5
+dataset:
+  records: 3
+  features:
+  - Year_Numeric
+  targets:
+  - Three_Star_Mines
+  - Five_Star_Mines
+forecast:
+  years: 5
+  file: ais_prediction.csv
+evaluation:
+  type: In-sample training evaluation
+  validated_test_accuracy: false

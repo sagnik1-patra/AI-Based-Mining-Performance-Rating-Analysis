@@ -1,0 +1,39 @@
+project:
+  name: AI-Based Mining Performance Rating Analysis
+  domain: Machine Learning
+  task: Multi-output Regression
+  dataset: RS_Session_265_AU_1557_A_to_D.csv
+dataset:
+  rows: 3
+  features:
+  - Year_Numeric
+  targets:
+  - Three_Star_Mines
+  - Five_Star_Mines
+models:
+  linear_regression:
+    type: LinearRegression
+    file: mining_model.pkl
+  neural_network:
+    type: Sequential
+    hidden_layers:
+    - 32
+    - 16
+    - 8
+    activation: relu
+    output_activation: linear
+    optimizer: Adam
+    loss: mse
+    epochs: 300
+    batch_size: 1
+    file: mining_model.h5
+preprocessing:
+  input_scaler: x_scaler.pkl
+  target_scaler: y_scaler.pkl
+forecast:
+  future_years: 5
+  output_file: mining_predictions.csv
+limitations:
+  small_dataset: true
+  validated_test_accuracy: false
+  forecast_type: Illustrative extrapolation only

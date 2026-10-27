@@ -1,0 +1,82 @@
+{
+    "project_name": "AI-Based Mining Performance Rating Analysis",
+    "dataset_name": "RS_Session_265_AU_1557_A_to_D.csv",
+    "total_records": 3,
+    "year_range": {
+        "start": 2020,
+        "end": 2022
+    },
+    "dataset_statistics": {
+        "average_three_star_mines": 1030.3333333333333,
+        "average_five_star_mines": 61.333333333333336,
+        "maximum_three_star_mines": 1129,
+        "maximum_five_star_mines": 76,
+        "average_five_star_percentage": 5.8897054436750365
+    },
+    "training_errors": {
+        "linear_regression": {
+            "three_star_mae": 6.4444444444476785,
+            "five_star_mae": 9.777777777777374
+        },
+        "neural_network": {
+            "three_star_mae": 1.0509440104166667,
+            "five_star_mae": 0.3052113850911458
+        }
+    },
+    "neural_network": {
+        "epochs": 300,
+        "final_training_loss": 0.0005363884847611189,
+        "final_training_mae_scaled": 0.01684412732720375
+    },
+    "model_files": {
+        "linear_regression": "mining_model.pkl",
+        "neural_network": "mining_model.h5",
+        "input_scaler": "x_scaler.pkl",
+        "target_scaler": "y_scaler.pkl"
+    },
+    "forecast_years": [
+        "2023-24",
+        "2024-25",
+        "2025-26",
+        "2026-27",
+        "2027-28"
+    ],
+    "forecast_results": [
+        {
+            "Year": "2023-24",
+            "LR_Three_Star_Mines": 1237,
+            "LR_Five_Star_Mines": 89,
+            "NN_Three_Star_Mines": 1170,
+            "NN_Five_Star_Mines": 71
+        },
+        {
+            "Year": "2024-25",
+            "LR_Three_Star_Mines": 1341,
+            "LR_Five_Star_Mines": 103,
+            "NN_Three_Star_Mines": 1211,
+            "NN_Five_Star_Mines": 75
+        },
+        {
+            "Year": "2025-26",
+            "LR_Three_Star_Mines": 1444,
+            "LR_Five_Star_Mines": 117,
+            "NN_Three_Star_Mines": 1253,
+            "NN_Five_Star_Mines": 79
+        },
+        {
+            "Year": "2026-27",
+            "LR_Three_Star_Mines": 1548,
+            "LR_Five_Star_Mines": 131,
+            "NN_Three_Star_Mines": 1295,
+            "NN_Five_Star_Mines": 82
+        },
+        {
+            "Year": "2027-28",
+            "LR_Three_Star_Mines": 1651,
+            "LR_Five_Star_Mines": 145,
+            "NN_Three_Star_Mines": 1336,
+            "NN_Five_Star_Mines": 86
+        }
+    ],
+    "evaluation_note": "Only three observations are available. Models were trained on all observations. Reported MAE values are in-sample errors, not independent test performance. Forecasts are illustrative and unreliable for real-world decision-making."
+}

@@ -1,0 +1,102 @@
+{
+    "project_name": "AI-Based Mining Performance Rating Analysis",
+    "algorithm": "Artificial Immune System",
+    "optimization_method": "Clonal Selection Algorithm",
+    "dataset_records": 3,
+    "year_range": {
+        "start": 2020,
+        "end": 2022
+    },
+    "ais_parameters": {
+        "population_size": 80,
+        "generations": 500,
+        "elite_size": 15,
+        "clones_per_antibody": 10,
+        "mutation_rate": 0.25,
+        "mutation_decay": 0.995,
+        "random_injection": 10,
+        "polynomial_degree": 1,
+        "random_seed": 42
+    },
+    "best_fitness": 0.2291119710525022,
+    "best_antibody": [
+        -1.2206783790603297,
+        -0.9074505174369858,
+        1.2209902669010733,
+        0.9072067006743277
+    ],
+    "model_coefficients": [
+        [
+            -1.2206783790603297,
+            -0.9074505174369858
+        ],
+        [
+            1.2209902669010733,
+            0.9072067006743277
+        ]
+    ],
+    "training_metrics": [
+        {
+            "Algorithm": "AIS-CLONALG",
+            "Target": "Three-Star and Above Mines",
+            "MAE": 6.453258746645361,
+            "MSE": 46.72317982962045,
+            "RMSE": 6.835435599112938,
+            "R2_Score": 0.9935000368122765
+        },
+        {
+            "Algorithm": "AIS-CLONALG",
+            "Target": "Five-Star Mines",
+            "MAE": 9.776523385298354,
+            "MSE": 107.55557304941199,
+            "RMSE": 10.370900300813425,
+            "R2_Score": 0.5485073892515355
+        }
+    ],
+    "future_predictions": [
+        {
+            "Year": "2023-24",
+            "AIS_Three_Star_Mines": 1237,
+            "AIS_Five_Star_Mines": 89,
+            "AIS_Five_Star_Percentage": 7.19482619240097
+        },
+        {
+            "Year": "2024-25",
+            "AIS_Three_Star_Mines": 1341,
+            "AIS_Five_Star_Mines": 103,
+            "AIS_Five_Star_Percentage": 7.680835197613721
+        },
+        {
+            "Year": "2025-26",
+            "AIS_Three_Star_Mines": 1444,
+            "AIS_Five_Star_Mines": 117,
+            "AIS_Five_Star_Percentage": 8.102493074792244
+        },
+        {
+            "Year": "2026-27",
+            "AIS_Three_Star_Mines": 1548,
+            "AIS_Five_Star_Mines": 131,
+            "AIS_Five_Star_Percentage": 8.462532299741603
+        },
+        {
+            "Year": "2027-28",
+            "AIS_Three_Star_Mines": 1651,
+            "AIS_Five_Star_Mines": 145,
+            "AIS_Five_Star_Percentage": 8.782556026650514
+        }
+    ],
+    "generated_files": [
+        "ais_model.pkl",
+        "ais_model.h5",
+        "ais_accuracy_graph.png",
+        "ais_heatmap.png",
+        "ais_comparison_graph.png",
+        "ais_result.csv",
+        "ais_result_graph.png",
+        "ais_prediction.csv",
+        "ais_prediction_graph.png",
+        "ais_error_graph.png",
+        "ais_convergence_graph.png"
+    ],
+    "limitations": "Only three annual observations are available. The reported metrics are training-fit metrics. Future forecasts are illustrative extrapolations."
+}

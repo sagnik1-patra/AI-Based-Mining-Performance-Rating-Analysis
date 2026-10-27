@@ -1,0 +1,102 @@
+{
+    "project_name": "AI-Based Mining Performance Rating Analysis",
+    "algorithm": "Particle Swarm Optimization",
+    "dataset_records": 3,
+    "year_range": {
+        "start": 2020,
+        "end": 2022
+    },
+    "pso_parameters": {
+        "population_size": 80,
+        "iterations": 500,
+        "inertia_weight": 0.7,
+        "cognitive_coefficient": 1.5,
+        "social_coefficient": 1.5,
+        "polynomial_degree": 1,
+        "position_min": -5.0,
+        "position_max": 5.0,
+        "velocity_max": 0.5,
+        "random_seed": 42
+    },
+    "best_fitness": 0.22911181397832153,
+    "best_particle": [
+        -1.2205139553402358,
+        -0.9068804736348514,
+        1.2205749819026657,
+        0.9069258171294218
+    ],
+    "model_coefficients": [
+        [
+            -1.2205139553402358,
+            -0.9068804736348514
+        ],
+        [
+            1.2205749819026657,
+            0.9069258171294218
+        ]
+    ],
+    "training_metrics": [
+        {
+            "Algorithm": "PSO",
+            "Target": "Three-Star and Above Mines",
+            "MAE": 6.446169123939019,
+            "MSE": 46.72240962420785,
+            "RMSE": 6.835379259719818,
+            "R2_Score": 0.9935001439605239
+        },
+        {
+            "Algorithm": "PSO",
+            "Target": "Five-Star Mines",
+            "MAE": 9.778011061732334,
+            "MSE": 107.55555898407145,
+            "RMSE": 10.370899622697708,
+            "R2_Score": 0.5485074482944762
+        }
+    ],
+    "future_predictions": [
+        {
+            "Year": "2023-24",
+            "PSO_Three_Star_Mines": 1237,
+            "PSO_Five_Star_Mines": 89,
+            "PSO_Five_Star_Percentage": 7.19482619240097
+        },
+        {
+            "Year": "2024-25",
+            "PSO_Three_Star_Mines": 1341,
+            "PSO_Five_Star_Mines": 103,
+            "PSO_Five_Star_Percentage": 7.680835197613721
+        },
+        {
+            "Year": "2025-26",
+            "PSO_Three_Star_Mines": 1444,
+            "PSO_Five_Star_Mines": 117,
+            "PSO_Five_Star_Percentage": 8.102493074792244
+        },
+        {
+            "Year": "2026-27",
+            "PSO_Three_Star_Mines": 1548,
+            "PSO_Five_Star_Mines": 131,
+            "PSO_Five_Star_Percentage": 8.462532299741603
+        },
+        {
+            "Year": "2027-28",
+            "PSO_Three_Star_Mines": 1651,
+            "PSO_Five_Star_Mines": 145,
+            "PSO_Five_Star_Percentage": 8.782556026650514
+        }
+    ],
+    "generated_files": [
+        "pso_model.pkl",
+        "pso_model.h5",
+        "pso_accuracy_graph.png",
+        "pso_heatmap.png",
+        "pso_comparison_graph.png",
+        "pso_result.csv",
+        "pso_result_graph.png",
+        "pso_prediction.csv",
+        "pso_prediction_graph.png",
+        "pso_error_graph.png",
+        "pso_convergence_graph.png"
+    ],
+    "limitations": "Only three annual observations are available. Reported metrics are in-sample training metrics. Future forecasts are illustrative extrapolations."
+}

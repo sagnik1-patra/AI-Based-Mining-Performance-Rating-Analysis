@@ -1,0 +1,33 @@
+project:
+  name: AI-Based Mining Performance Rating Analysis
+  algorithm: Particle Swarm Optimization
+  dataset: RS_Session_265_AU_1557_A_to_D.csv
+pso_parameters:
+  population_size: 80
+  iterations: 500
+  inertia_weight: 0.7
+  cognitive_coefficient: 1.5
+  social_coefficient: 1.5
+  polynomial_degree: 1
+  position_min: -5.0
+  position_max: 5.0
+  velocity_max: 0.5
+  random_seed: 42
+model:
+  type: Multi-Output Polynomial Regression
+  optimization: Particle Swarm Optimization
+  model_file: pso_model.pkl
+  h5_file: pso_model.h5
+dataset:
+  records: 3
+  features:
+  - Year_Numeric
+  targets:
+  - Three_Star_Mines
+  - Five_Star_Mines
+forecast:
+  years: 5
+  file: pso_prediction.csv
+evaluation:
+  type: In-sample training evaluation
+  validated_test_accuracy: false
